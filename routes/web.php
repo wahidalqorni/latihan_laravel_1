@@ -1,20 +1,12 @@
 <?php
 
+use App\Http\Controllers\FormController;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 // routing default itu pake tanda /
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing-page');
 });
 
 
@@ -29,3 +21,10 @@ Route::get('/driver', function() {
 Route::get('/add-driver', function() {
     return view('driver.add');
 } );
+
+// routing menggunakan controller
+Route::get('register', [FormController::class, 'register'] );
+Route::post('register-post', [FormController::class, 'postData'] );
+
+Route::get('luas-persegi-panjang', [FormController::class, 'formLuas'] );
+Route::post('luas-persegi-panjang', [FormController::class, 'hitungLuas'] );

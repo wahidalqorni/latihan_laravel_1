@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Landing Page</title>
+@extends('layouts.master')
 
-</head>
+@section('content')
+<div class="container">
+    <h1>Landing Page</h1>
+    {{-- mengambil gambar dari folder public --}}
+    <img src="{{ asset('images/appstore.png') }}" alt="" width="300" height="300">
 
+    <p class="paragraf">ini paragraf</p>
+</div>
+@endsection
 
-<body>
-    
-</body>
-</html>
